@@ -40,13 +40,9 @@ namespace CallRequestResponseService
                             "input1", 
                             new StringTable() 
                             {
-<<<<<<< HEAD
-                                ColumnNames = new string[] {"MPG", "Cyl", "Displacement", "Horsepower", "Weight", "Acceleration", "Year", "CountryCode", "Model"},
-                                Values = new string[,] {  { "15", "8", "369", "160", "2753", "12", "99", "1", "golf4" },  { "17", "8", "586", "137", "1459", "10", "70", "1", "bmw5" }  }
-=======
                                 ColumnNames = new string[] {"Recency", "Frequency", "Monetary", "Time", "Class"},
                                 Values = new string[,] {  { "3", "22", "4000", "49", "1" },  { "2", "46", "10200", "31", "0" },  }
->>>>>>> development
+
                             }
                         },
                     },
