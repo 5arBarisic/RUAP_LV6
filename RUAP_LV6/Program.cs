@@ -35,25 +35,24 @@ namespace CallRequestResponseService
                 var scoreRequest = new
                 {
 
-                    Inputs = new Dictionary<string, StringTable>() {
-                        {
-                            "input1",
-                            new StringTable()
+                    Inputs = new Dictionary<string, StringTable> () { 
+                        { 
+                            "input1", 
+                            new StringTable() 
                             {
-                                ColumnNames = new string[] {"MPG", "Cyl", "Displacement", "Horsepower", "Weight", "Acceleration", "Year", "CountryCode", "Model"},
-                                Values = new string[,] {  { "0", "0", "0", "0", "0", "0", "0", "0", "value" },  { "0", "0", "0", "0", "0", "0", "0", "0", "value" },  }
+                                ColumnNames = new string[] {"Recency", "Frequency", "Monetary", "Time", "Class"},
+                                Values = new string[,] {  { "0", "0", "0", "0", "0" },  { "0", "0", "0", "0", "0" },  }
                             }
                         },
                     },
-                    GlobalParameters = new Dictionary<string, string>()
-                    {
-                    }
+                    GlobalParameters = new Dictionary<string, string>() {
+}
                 };
-                const string apiKey = "ejNx6deSGW+/j3kyj9n81N4xttUvG22X+/5mAcw0ePJdXxjFarkHFoT38TPMqeqVe8cFtJU9NPnk18HmAYojTA=="; // Replace this with the API key for the web service
-                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiKey);
+                const string apiKey = "SACGTfFVSvw8vcJEWjnQys7LCZQzVTe6T6IpC/wgPVC7RWDKfm74ufP2INbobBybeBIFvGNpcSmNn+928D7E5Q=="; // Replace this with the API key for the web service
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue( "Bearer", apiKey);
 
-                client.BaseAddress = new Uri("https://ussouthcentral.services.azureml.net/workspaces/e0d2c7a1ef9f49c1b2d4bc5b118ecc8c/services/f5c4b5a11ad4454d95d715ba7d4af8ed/execute?api-version=2.0&details=true");
-
+                client.BaseAddress = new Uri("https://ussouthcentral.services.azureml.net/workspaces/e0d2c7a1ef9f49c1b2d4bc5b118ecc8c/services/09433bc4e2884e56ba86e40961b09b08/execute?api-version=2.0&details=true");
+                
                 // WARNING: The 'await' statement below can result in a deadlock if you are calling this code from the UI thread of an ASP.Net application.
                 // One way to address this would be to call ConfigureAwait(false) so that the execution does not attempt to resume on the original context.
                 // For instance, replace code such as:
